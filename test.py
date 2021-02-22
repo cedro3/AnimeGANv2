@@ -32,7 +32,7 @@ def stats_graph(graph):
 
 def test(checkpoint_dir, style_name, test_dir, if_adjust_brightness, img_size=[256,256]):
     # tf.reset_default_graph()
-    result_dir = 'results/'+style_name
+    result_dir = 'images/output/'+style_name
     check_folder(result_dir)
     test_files = glob('{}/*.*'.format(test_dir))
 
