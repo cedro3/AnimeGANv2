@@ -79,7 +79,7 @@ def cvt2anime_video(video, output, checkpoint_dir, output_format='MP4V', img_siz
     vid = cv2.VideoCapture(video)
     vid_name = os.path.basename(video)
     total = int(vid.get(cv2.CAP_PROP_FRAME_COUNT))
-    fps = int(vid.get(cv2.CAP_PROP_FPS))
+    fps = vid.get(cv2.CAP_PROP_FPS)
     # codec = cv2.VideoWriter_fourcc('M', 'J', 'P', 'G')
     codec = cv2.VideoWriter_fourcc(*output_format)
 
